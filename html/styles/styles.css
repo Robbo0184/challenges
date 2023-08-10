@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* header {
+    background-color: aqua;
+    height: 10px;
+} */
+
+img {
+    width: 200px;
+    border-radius: 5%;
+}
+
+a {
+    text-decoration: none;
+}
