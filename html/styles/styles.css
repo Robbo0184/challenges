@@ -4,10 +4,23 @@
     padding: 0;
 }
 
-/* header {
+main {
+    position: relative;
+    
+}
+
+header {
+   position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 10px;
     background-color: aqua;
-    height: 10px;
-} */
+}
 
 img {
     width: 200px;
@@ -16,4 +29,12 @@ img {
 
 a {
     text-decoration: none;
+}
+
+
+
+
+footer {
+       position: absolute;
+       bottom: 0;
 }
