@@ -6,6 +6,10 @@
 
 main {
     position: relative;
+    background-color: magenta;
+    min-height: 85vh;
+    margin-top: 17px;
+    
     
 }
 
@@ -15,23 +19,46 @@ header {
 
 nav {
     position: absolute;
+    display: flex;
     top: 0;
+    justify-content: space-evenly;
     right: 0;
     font-size: 30px;
     padding: 10px;
     background-color: aqua;
+    min-width: 35vw;
 }
 
 img {
-    width: 200px;
+    width: 170px;
     border-radius: 5%;
+   
 }
 
 a {
     text-decoration: none;
 }
 
+#contact {
+    padding-top: 30px;
+}
 
+#about {
+   padding-top: 60px;
+}
+
+#experience {
+    padding-top: 60px;
+}
+
+#links{
+    position: absolute;
+    bottom: 0;
+}
+
+#links img {
+    width: 100px;
+}
 
 
 footer {
