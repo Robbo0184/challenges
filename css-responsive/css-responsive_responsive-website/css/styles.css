@@ -246,8 +246,35 @@ width, etc. */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
-
+@media screen and (min-width: 480px){
+    .card-section {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .product-card {
+      width: 36%;
+      flex-wrap: wrap;
+      
+    }
+    .intro-text {
+      width: 36%;
+      align-self: start;
+    }
+}
 /* Media Query Desktop */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+@media screen and (min-width: 1200px) {
+  
+  .card-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .--forest {
+    width: 72%
+  }
+}
