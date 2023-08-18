@@ -61,8 +61,7 @@ h1 {
 
 .box--one {
   background-color: lightblue;
-
-  width: 100px;
+  width: 40%;
   height: 100px;
 }
 
@@ -93,4 +92,30 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .box--two {
+     width: 200px;
+     
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .box--two {
+    width: 400px;
+  }
+}
+
+@media (orientation: landscape) {
+  .box--three {
+    height: 50px;
+    width: 250px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+   .box--four {
+    background-color: #ff4a11;
+   }
 }
