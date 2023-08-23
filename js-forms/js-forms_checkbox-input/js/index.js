@@ -33,6 +33,7 @@ form.addEventListener("submit", (event) => {
   if
     (tosCheckbox.checked) {
     showSuccessMessage()
+    hideTosError()
   }
   if (!tosCheckbox.checked) {
     showTosError()
@@ -44,6 +45,7 @@ form.addEventListener("submit", (event) => {
 
   // eslint-disable-next-line no-alert
   alert("Form submitted");
+  
 });
 
 
