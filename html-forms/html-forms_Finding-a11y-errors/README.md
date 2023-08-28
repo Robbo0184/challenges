@@ -19,7 +19,7 @@ Switch to the [`index.html`](./index.html) file and make the form accessible!
   - If not, did we make a spelling mistake?
 - Do we need the given placeholder?
 
-## Development
+## Developmentnpx ghcd@latest spicedacademy/fs-web-exercises/tree/main/sessions/html-forms/zoo
 
 ### CodeSandbox
 
