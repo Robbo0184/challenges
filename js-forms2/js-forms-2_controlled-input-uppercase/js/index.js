@@ -1,3 +1,11 @@
 console.clear();
 
-const input = document.querySelector('[data-js="toUpperCase"]');
+const inputElement = document.querySelector('[data-js="toUpperCase"]');
+
+
+inputElement.addEventListener('input', (e) => {
+     inputElement.value = inputElement.value.toUpperCase()
+
+     
+     
+})
