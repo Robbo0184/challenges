@@ -1,0 +1,17 @@
+@import "../../App.css";
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.badge {
+    width: 4rem;
+    background-color: var(--color-nemo);
+    text-align: center;
+    justify-content: center;
+    border-radius: 20%;
+
+}

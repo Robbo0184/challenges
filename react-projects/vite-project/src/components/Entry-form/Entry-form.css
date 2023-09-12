@@ -1,0 +1,19 @@
+@import "../../App.css";
+
+.entry-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.submit-button {
+    background-color: var( --color-nemo);
+    color: var( --color-foam);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 15%;
+    border-color: white;
+}
