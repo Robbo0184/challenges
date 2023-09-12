@@ -1,0 +1,44 @@
+@import "../../App.css";
+
+.entry-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    
+   
+}
+
+.entry-card {
+   justify-content: center;
+   width: 35vw;
+   background-color: aquamarine;
+   height: 30vh;
+   gap: 3rem;
+   padding-top: 3rem;
+   position: relative;
+}
+
+.star-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.date {
+    position: absolute;
+    top: 0;
+    left:36%;
+    padding-top: 0.5rem;
+}
+
+.heading {
+    padding-top: 0.8rem;
+}
+
+.text {
+    padding-top: 3rem;
+}

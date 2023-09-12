@@ -1,0 +1,11 @@
+@import "../../App.css";
+
+
+.header {
+    background-color: var(--color-water-10);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+}
