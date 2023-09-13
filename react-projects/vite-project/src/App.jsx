@@ -2,6 +2,7 @@ import { Header } from "./components/Header/Header";
 import { EntryForm } from './components/Entry-form/Entry-form';
 import { TabBar } from './components/Tab-Bar/Tab-bar';
 import { EntryList } from './components/Entry-List/Entry-list';
+import { Entry } from "./components/Entry/Entry";
 import './App.css'
 
 function App() {
