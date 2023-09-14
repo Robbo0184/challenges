@@ -1,19 +1,21 @@
+import { useState } from "react";
 import "./Favourite-button.css"
-import { ReactComponent as StarFilled } from "./star-filled.svg";
-import { ReactComponent as Star } from "./star.svg";
+import StarFilled from "./star-filled.svg";
+import Star from "./star.svg";
 
-export function FavouriteButton () {
-    const isFavorite = false;
 
-    return (
-      <button
-        className="favorite-button"
-        onClick={() => {
-          console.log("favorite button clicked");
-        }}
-        aria-label="favorite"
-      >
-        {isFavorite ? <StarFilled /> : <Star />}
-      </button>
-    );
-  }
+export function FavouriteButton() {
+  const [isFavourite, setFavourite] = useState(false)
+
+  return (
+    <button
+      className="favourite-button"
+      onClick={() => {
+        setFavourite(!isFavourite)
+      }}
+      aria-label="favourite"
+    >
+      <img src={isFavourite ? StarFilled : Star} alt="Star Icon" />
+    </button>
+  );
+}

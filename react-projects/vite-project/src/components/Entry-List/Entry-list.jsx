@@ -1,30 +1,29 @@
 import "./Entry-List.css";
-import emptyStarImage from "../../assets/star.svg"
+import { Entry } from "../Entry/Entry";
 
-export function EntryList({date, headline, text}) {
+
+
+export function EntryList() {
     return (
         <section className="entry-list">
-        <div className="entry-card">
-            <h2 className="date">{date}</h2>
-            <img className="star-image" src={emptyStarImage} />
-            <h2 className="heading">{headline}</h2>
-            <p className="text">{text}</p>
-        </div>
+            
+        <Entry
+        date= "Jan 06, 2022"
+        motto= "I just want some more cranberries."
+        notes= "Rory lives in Uganda these days, he's writing his thesis." />
+        
+        <Entry
+        date= "Jan 07, 2022"
+        motto= "I just want can't have any more cranberries."
+        notes= "Rory lives in Uganda these days, he's moving to Morocco soon though." />
 
-        <div className="entry-card">
-            <h2 className="date">{date}</h2>
-            <img className="star-image" src={emptyStarImage} />
-            <h2 className="heading">{headline}</h2>
-            <p className="text">{text}</p>
-        </div>
+        <Entry 
+        date= "Jan 08, 2022"
+        motto= "Hi Im Rory."
+        notes= "I just got back from Ireland it was really hot."/>
+            
 
-        <div className="entry-card">
-            <h2 className="date"></h2>
-            <img className="star-image" src={emptyStarImage} />
-            <h2 className="heading">{headline}</h2>
-            <p className="text">{text}</p>
-        </div>
-    </section>
+        </section>
 
     )
 }
