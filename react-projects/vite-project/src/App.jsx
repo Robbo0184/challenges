@@ -38,7 +38,15 @@ const initialEntries = [
 
 function App() {
 
-const [entries, setEntries] = useState(initialEntries)
+  const [entries, setEntries] = useState(initialEntries);
+
+  function handleAddEntry(newEntry) {
+    const date = new Date().toLocaleDateString('en-us', {
+      dateStyle: "medium",
+    });
+
+
+  }
 
 
   return (
@@ -46,9 +54,9 @@ const [entries, setEntries] = useState(initialEntries)
       <Header>
       </Header>
       <main>
-        <EntryForm addOnEntry={} />
+        <EntryForm addOnEntry={handleAddEntry} />
         <TabBar />
-        <EntryList entries= {entries} />
+        <EntryList entries={entries} />
       </main>
     </>
   )
