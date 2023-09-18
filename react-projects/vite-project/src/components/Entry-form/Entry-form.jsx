@@ -5,17 +5,11 @@ export function EntryForm({ addOnEntry }) {
         event.preventDefault();
         const formData = new FormData(event.target);
         const data = Object.fromEntries(formData);
-        console.log(data)
         addOnEntry(data)
-
         event.target.reset();
-
         event.target.motto.focus();
         
-
-
-
-    }
+}
 
     return (
         <form className="entry-form" onSubmit={handleSubmit}>
