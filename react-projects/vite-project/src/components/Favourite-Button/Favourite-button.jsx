@@ -4,14 +4,14 @@ import StarFilled from "./star-filled.svg";
 import Star from "./star.svg";
 
 
-export function FavouriteButton() {
-  const [isFavourite, setFavourite] = useState(false)
+export function FavouriteButton({onToggleFavourite, isFavourite, id}) {
+
 
   return (
     <button
       className="favourite-button"
       onClick={() => {
-        setFavourite(!isFavourite)
+        onToggleFavourite(id, !isFavourite)
       }}
       aria-label="favourite"
     >

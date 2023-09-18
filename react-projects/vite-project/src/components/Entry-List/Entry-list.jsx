@@ -5,13 +5,13 @@ import { useState } from "react";
 
 
 
-export function EntryList({entries}) {
+export function EntryList({entries, onToggleFavourite}) {
     
     return (
         <section className="entry-list">
             
        {entries.map((entry) => {
-           return <Entry key={entry.id} date={entry.date} motto={entry.motto} notes={entry.notes}/>
+           return <Entry id={entry.id} isFavourite={entry.isFavourite} key={entry.id} onToggleFavourite={onToggleFavourite} date={entry.date} motto={entry.motto} notes={entry.notes}/>
        })}
             
 
