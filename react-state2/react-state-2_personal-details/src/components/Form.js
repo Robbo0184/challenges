@@ -1,17 +1,25 @@
+
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({onChangeName, onChangeEmail}) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
+    const form = event.target
+    onChangeName(event.target.name.value)
+    onChangeEmail(event.target.email.value)
+   
+    form.reset()
+
   }
 
   return (
     <form
       className="form"
       aria-labelledby="user-details"
+      // onSubmit={handleSubmit}
       onSubmit={handleSubmit}
     >
       <h2 id="user-details">Please enter your details here!</h2>
