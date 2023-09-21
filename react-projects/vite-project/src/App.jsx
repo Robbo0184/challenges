@@ -41,31 +41,46 @@ const initialEntries = [
   },
 ];
 
+
+
 function App() {
-
   const [entries, setEntries] = useState(initialEntries)
-console.log(entries)
-  function handleEntry (newEntry) {
+  const [filter, setFilter] = useState('all')
+  const favouriteEntries = entries.filter((entry) => {
+    return entry.isFavourite
+  })
+
+  console.log(favouriteEntries)
+
+  function handleEntry(newEntry) {
     const date = new Date().toLocaleDateString("en-us", { dateStyle: "medium" });
-    setEntries([{ id: uid(), isFavourite:false, date, ...newEntry }, ...entries]);
+    setEntries([{ id: uid(), isFavourite: false, date, ...newEntry }, ...entries]);
   }
 
-  function handleToggleFavourites (id) {
-        setEntries(
-          entries.map((entry) => {
-           return entry.id === id ? {...entry, isFavourite: !entry.isFavourite} : entry
-          })
-        )
+  function handleToggleFavourites(id) {
+    setEntries(
+      entries.map((entry) => {
+        return entry.id === id ? { ...entry, isFavourite: !entry.isFavourite } : entry
+      })
+    )
   }
-  
-return (
+
+  function handleShowFavouriteEntries() {
+    setFilter("favourites")
+  }
+
+  function handleShowAllEntries() {
+    setFilter('all')
+  }
+
+  return (
     <>
       <Header>
       </Header>
       <main>
-        <EntryForm addOnEntry={handleEntry}/>
-        <TabBar />
-        <EntryList entries={entries} onToggleFavourite={handleToggleFavourites} />
+        <EntryForm addOnEntry={handleEntry} />
+        <TabBar onShowAllEntries={handleShowAllEntries} onShowFavouriteEntries={handleShowFavouriteEntries} />
+        <EntryList filter={filter} entries={entries} onToggleFavourite={handleToggleFavourites} />
       </main>
     </>
   )
