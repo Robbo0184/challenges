@@ -7,4 +7,24 @@ jest.mock("next/router", () => ({
   },
 }));
 
-test("renders with two links 'Play' and 'History'", () => {});
+test('renders "Play" and "History" as links', () => {
+  render(<Navigation players={[]} />);
+  const playLinks = screen.getAllByText('Play');
+  const historyLinks = screen.getAllByText('History');
+
+  playLinks.forEach((link) => {
+    expect(link.tagName).toBe('A');
+  });
+  historyLinks.forEach((link) => {
+    expect(link.tagName).toBe('A');
+  });
+
+  
+  expect(playLinks.length).toBeGreaterThan(0);
+  expect(historyLinks.length).toBeGreaterThan(0);
+});
+
+
+
+
+

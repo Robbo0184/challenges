@@ -8,7 +8,29 @@ jest.mock("next/router", () => ({
   },
 }));
 
-test("renders two input fields and a button", () => {});
+
+
+test('renders two input fields and a button', () => {
+ 
+  jest.mock('next/router', () => ({
+    useRouter: () => ({
+      push: jest.fn(),
+    }),
+  }));
+
+ 
+  render(<GameForm onCreateGame={jest.fn()} />);
+
+  
+  const nameOfGameInput = screen.getByLabelText('Name of game');
+  const playerNamesInput = screen.getByLabelText('Player names, separated by comma');
+  const createGameButton = screen.getByText('Create game');
+
+  expect(nameOfGameInput).toBeInTheDocument();
+  expect(playerNamesInput).toBeInTheDocument();
+  expect(createGameButton).toBeInTheDocument();
+});
+
 
 test("renders a form with the accessible name 'Create a new game'", () => {});
 
