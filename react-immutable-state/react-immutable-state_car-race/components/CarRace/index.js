@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import { useImmer } from "use-immer";
 import Winner from "../Winner";
 import {
   CarButton,
@@ -9,12 +10,23 @@ import {
 } from "./CarRace.styled";
 import { initialCars, getRandomDistance } from "../../utils/utils";
 
+
 const finishLine = 200;
 
 export default function CarRace() {
-  const [cars, setCars] = useState(initialCars);
-
+  const [cars, updateCars] = useImmer(initialCars);
+  
   function moveCar(clickedCar) {
+   const foundCar =  cars.findIndex((car)=> {
+      return car.emoji === clickedCar.emoji 
+      
+    })
+   
+updateCars((draft)=> {
+  draft[foundCar].position.lastDistance = coveredDistance
+  draft[foundCar].position.x += coveredDistance
+})
+
     const coveredDistance = getRandomDistance();
     console.log("clickedCar", clickedCar);
     console.log("coveredDistance", coveredDistance);
